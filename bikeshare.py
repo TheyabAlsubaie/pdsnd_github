@@ -38,10 +38,15 @@ def displayData():
 
 def convertSeconds(seconds):
     """Converts time of seconds into a more readable format (days, hours, minutes, seconds)."""
+    # Calculate how many days in variable "seconds"
     days = seconds // (24 * 60 * 60)        # 24 hours, 60 minutes, 60 seconds in a day.
     seconds %= 24 * 60 * 60                 # remove the calculated days from the time value
+    
+    # Calculate how many hours in variable "seconds"
     hours = seconds // ( 60 * 60)           # 60 minutes, 60 seconds in an hour
     seconds %= (60 * 60)                    # remove the calculated hours from the time value
+    
+    ## Calculate how many minutes in variable "seconds"
     minutes = seconds // 60                 #60 seconds in a minute
     seconds %= 60                           # remove the calculated minutes from the time value
 
@@ -317,12 +322,12 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     startTime = time.time()
 
-    # display total travel time
+    # display total travel time of all users
     totalTravelTime = df['Trip Duration'].sum()
     readableTotalTime = convertSeconds(totalTravelTime)
     print("Total Travel Time:", readableTotalTime)
 
-    # display mean travel time
+    # display mean (average) travel time. which is the sum of all trips divided by all count of trips (filtered results only, not counting raw trip counts)
     averageTravelTime = df['Trip Duration'].mean()
     readableAverageTravelTime = convertSeconds(averageTravelTime)
     print("Average Travel Time:", readableAverageTravelTime)
@@ -337,13 +342,13 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     startTime = time.time()
 
-    # Display counts of user types
+    # print counts of user types
     userTypes = df['User Type'].value_counts()
     print(userTypes)
     
     print()
 
-    # Display counts of gender
+    # print counts of genders
     if genderAndBirthStat == True:
         genders = df['Gender'].value_counts()
         print(genders)
