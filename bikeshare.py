@@ -38,10 +38,15 @@ def displayData():
 
 def convertSeconds(seconds):
     """Converts time of seconds into a more readable format (days, hours, minutes, seconds)."""
+    # Calculate how many days in variable "seconds"
     days = seconds // (24 * 60 * 60)        # 24 hours, 60 minutes, 60 seconds in a day.
     seconds %= 24 * 60 * 60                 # remove the calculated days from the time value
+    
+    # Calculate how many hours in variable "seconds"
     hours = seconds // ( 60 * 60)           # 60 minutes, 60 seconds in an hour
     seconds %= (60 * 60)                    # remove the calculated hours from the time value
+    
+    ## Calculate how many minutes in variable "seconds"
     minutes = seconds // 60                 #60 seconds in a minute
     seconds %= 60                           # remove the calculated minutes from the time value
 
