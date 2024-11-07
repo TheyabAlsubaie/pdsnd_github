@@ -322,12 +322,12 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     startTime = time.time()
 
-    # display total travel time
+    # display total travel time of all users
     totalTravelTime = df['Trip Duration'].sum()
     readableTotalTime = convertSeconds(totalTravelTime)
     print("Total Travel Time:", readableTotalTime)
 
-    # display mean travel time
+    # display mean (average) travel time. which is the sum of all trips divided by all count of trips (filtered results only, not counting raw trip counts)
     averageTravelTime = df['Trip Duration'].mean()
     readableAverageTravelTime = convertSeconds(averageTravelTime)
     print("Average Travel Time:", readableAverageTravelTime)
