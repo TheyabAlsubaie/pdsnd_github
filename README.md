@@ -15,3 +15,6 @@ chicago.csv; new_york_city.csv; washington.csv; bikeshare.py
 ### Credits
 Credits to #udacity github page and data owner #Motivate a bikeshare system provider
 
+### python script usage
+the script is interactive, please type the numbers prompted corresponding to your choice
+
