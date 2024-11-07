@@ -18,5 +18,5 @@ Credits to #udacity github page and data owner #Motivate a bikeshare system prov
 ### Python script usage
 The script is interactive, please type the numbers prompted corresponding to your choice
 
-### future improvements
-Code will be refactored for enhanced performance or readability
+### Future Improvements
+Code will be enhanced for readiability and/or refactored for better perforamce
